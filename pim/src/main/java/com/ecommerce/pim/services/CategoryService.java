@@ -1,0 +1,27 @@
+package com.ecommerce.pim.services;
+
+import com.ecommerce.pim.common.results.DataResult;
+import com.ecommerce.pim.common.results.Result;
+import com.ecommerce.pim.dtos.create.CreateCategoryRequestDto;
+import com.ecommerce.pim.dtos.update.UpdateCategoryRequestDto;
+import com.ecommerce.pim.models.Category;
+
+import java.util.List;
+
+public interface CategoryService {
+    Result getCategoryById(String id);
+
+    Result getCategoryByCategoryTitle(String CategoryTitle);
+
+    DataResult<List<Category>> getAllCategoryofPage(int page, int limit, String type);
+
+    DataResult<List<Category>> getAllCategoryofList();
+
+    Result createCategory(CreateCategoryRequestDto createCategoryRequestDto);
+
+    Result updateCategory(String id, UpdateCategoryRequestDto updateCategoryRequestDto);
+
+    Result softDeleteCategoryById(String id);
+
+    Result hardDeleteCategoryById(String id);
+}
