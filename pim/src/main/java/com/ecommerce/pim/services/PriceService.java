@@ -9,6 +9,12 @@ import com.ecommerce.pim.models.Price;
 
 import java.util.List;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public interface PriceService {
     Result getPriceById(String id);
 

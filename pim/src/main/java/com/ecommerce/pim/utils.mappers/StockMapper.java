@@ -7,6 +7,12 @@ import com.ecommerce.pim.models.Stock;
 
 import java.util.Date;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public class StockMapper {
     private StockMapper() throws IllegalAccessException {
         throw new IllegalAccessException();

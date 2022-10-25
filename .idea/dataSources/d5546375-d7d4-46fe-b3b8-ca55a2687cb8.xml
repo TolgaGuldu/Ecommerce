@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="om.test/Hibernate">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
+    <root id="1">
+      <ServerVersion>15.0</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="common"/>
+    <database id="3" parent="1" name="crm"/>
+    <database id="4" parent="1" name="om">
+      <Current>1</Current>
+    </database>
+    <database id="5" parent="1" name="pim"/>
+    <database id="6" parent="1" name="postgres"/>
+    <database id="7" parent="1" name="template0"/>
+    <database id="8" parent="1" name="template1"/>
+    <schema id="9" parent="4" name="information_schema"/>
+    <schema id="10" parent="4" name="pg_catalog"/>
+    <schema id="11" parent="4" name="public">
+      <Current>1</Current>
+    </schema>
+  </database-model>
+</dataSource>

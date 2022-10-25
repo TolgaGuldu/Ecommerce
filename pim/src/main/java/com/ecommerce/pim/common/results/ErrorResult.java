@@ -5,6 +5,12 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Getter
 @Setter
 @RequiredArgsConstructor

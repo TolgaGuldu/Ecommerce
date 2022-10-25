@@ -7,6 +7,12 @@ import com.ecommerce.om.models.Order;
 
 import java.util.Date;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public class OrderMapper {
     
     private OrderMapper() throws IllegalAccessException {

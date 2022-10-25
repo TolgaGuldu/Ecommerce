@@ -7,6 +7,12 @@ import com.ecommerce.pim.models.Category;
 
 import java.util.Date;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public class CategoryMapper {
     private CategoryMapper() throws IllegalAccessException {
         throw new IllegalAccessException();

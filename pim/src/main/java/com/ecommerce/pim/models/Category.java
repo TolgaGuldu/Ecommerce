@@ -7,6 +7,12 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Set;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Getter
 @Setter
 @AllArgsConstructor

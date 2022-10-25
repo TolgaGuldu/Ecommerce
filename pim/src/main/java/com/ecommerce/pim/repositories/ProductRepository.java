@@ -9,6 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("SELECT p FROM Product p WHERE p.id = :id and p.status ='1' and p.locked= '0'")

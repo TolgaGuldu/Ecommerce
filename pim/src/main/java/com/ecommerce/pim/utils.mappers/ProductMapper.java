@@ -7,6 +7,12 @@ import com.ecommerce.pim.models.Product;
 
 import java.util.Date;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public class ProductMapper {
     private ProductMapper() throws IllegalAccessException {
         throw new IllegalAccessException();

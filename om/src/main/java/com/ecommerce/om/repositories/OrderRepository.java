@@ -9,6 +9,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
     

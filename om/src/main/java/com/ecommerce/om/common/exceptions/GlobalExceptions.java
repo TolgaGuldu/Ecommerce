@@ -16,6 +16,12 @@ import org.springframework.web.context.request.WebRequest;
 import javax.persistence.NonUniqueResultException;
 import java.sql.SQLException;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @ControllerAdvice
 public class GlobalExceptions {
 
@@ -43,11 +49,6 @@ public class GlobalExceptions {
 
     @ExceptionHandler(TransactionSystemException.class)
     public ResponseEntity<Object> handlePersistenceException(final Exception ex, final WebRequest request) {
-        return ResponseEntity.ok(new ErrorResult("500", "Sunucuda beklenmedik bir hata meydana geldi."));
-    }
-
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Object> entityNotFound(WebRequest request, RuntimeException ex) {
         return ResponseEntity.ok(new ErrorResult("500", "Sunucuda beklenmedik bir hata meydana geldi."));
     }
 

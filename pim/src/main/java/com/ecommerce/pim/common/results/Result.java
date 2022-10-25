@@ -1,9 +1,14 @@
 package com.ecommerce.pim.common.results;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
 
 @NoArgsConstructor
 @Data

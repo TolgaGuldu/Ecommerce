@@ -6,6 +6,12 @@ import com.ecommerce.pim.models.Price;
 import com.ecommerce.pim.models.Stock;
 import lombok.Data;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Data
 public class CreateProductRequestDto {
     private String name;

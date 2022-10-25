@@ -6,6 +6,12 @@ import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 import java.util.stream.Stream;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Converter(autoApply = true)
 public class OriginConverter implements AttributeConverter<Origin, Integer> {
 

@@ -9,6 +9,12 @@ import com.ecommerce.pim.models.Product;
 
 import java.util.List;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public interface ProductService {
     Result getProductById(String id);
 

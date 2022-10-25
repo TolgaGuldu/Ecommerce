@@ -7,6 +7,12 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Data
 public class CreateCategoryRequestDto {
     @NotBlank

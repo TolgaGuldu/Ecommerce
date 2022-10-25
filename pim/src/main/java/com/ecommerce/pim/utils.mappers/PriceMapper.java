@@ -7,6 +7,12 @@ import com.ecommerce.pim.models.Price;
 
 import java.util.Date;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public class PriceMapper {
     private PriceMapper() throws IllegalAccessException {
         throw new IllegalAccessException();

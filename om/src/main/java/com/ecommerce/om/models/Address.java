@@ -8,6 +8,12 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Getter
 @Setter
 @AllArgsConstructor

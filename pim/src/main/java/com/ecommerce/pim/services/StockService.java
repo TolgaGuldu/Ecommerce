@@ -9,6 +9,12 @@ import com.ecommerce.pim.models.Stock;
 
 import java.util.List;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public interface StockService {
     Result getStockById(String id);
 

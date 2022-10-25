@@ -7,6 +7,12 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class,
         SpringDataWebAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class})

@@ -5,6 +5,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @NoArgsConstructor
 @Data
 public class Result {

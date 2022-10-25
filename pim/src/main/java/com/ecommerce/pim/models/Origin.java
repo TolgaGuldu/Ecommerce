@@ -1,5 +1,11 @@
 package com.ecommerce.pim.models;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 public enum Origin {
     TURKEY("Türkiye", "Turkey", "+90", 90),
     UNITED_KINGDOM("Birleşik Krallık", "United Kingdom", "+44", 44),

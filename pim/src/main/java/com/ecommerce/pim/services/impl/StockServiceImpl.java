@@ -21,6 +21,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @Service
 public class StockServiceImpl implements StockService {
 

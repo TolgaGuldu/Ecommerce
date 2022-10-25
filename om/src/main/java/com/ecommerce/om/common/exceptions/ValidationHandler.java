@@ -30,6 +30,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created on 25 October, 2022
+ *
+ * @author tolga
+ */
+
 @ControllerAdvice
 public class ValidationHandler extends ResponseEntityExceptionHandler {
 
