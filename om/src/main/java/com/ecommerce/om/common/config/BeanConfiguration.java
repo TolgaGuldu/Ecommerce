@@ -17,11 +17,11 @@ public class BeanConfiguration {
         return messageSource;
     }
 
-    /*@Bean
+    @Bean
     public LocalValidatorFactoryBean validator() {
         LocalValidatorFactoryBean bean = new LocalValidatorFactoryBean();
         bean.setValidationMessageSource(messageSource());
         return bean;
-    }*/
+    }
 
 }

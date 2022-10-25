@@ -1,8 +1,5 @@
 package com.ecommerce.pim.repositories;
 
-import com.ecommerce.pim.models.Category;
-import com.ecommerce.pim.models.Product;
-import com.ecommerce.pim.models.Product;
 import com.ecommerce.pim.models.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,10 +20,10 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Product findByIdAndStatusAndLocked(long id, boolean status, boolean locked);
 
     @Query("SELECT p FROM Product p WHERE p.active='0' and p.status ='1' and p.locked= '0'")
-    Page<Category> findNonActiveAll(Pageable pageable);
+    Page<Product> findNonActiveAll(Pageable pageable);
 
     @Query("SELECT p FROM Product p WHERE p.active='1' and p.status ='1' and p.locked= '0'")
-    Page<Category> findActiveAll(Pageable pageable);
+    Page<Product> findActiveAll(Pageable pageable);
 
     Product findByIdAndStatusAndLocked(Long id, char status, char locked);
 

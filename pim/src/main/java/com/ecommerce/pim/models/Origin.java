@@ -1,11 +1,9 @@
 package com.ecommerce.pim.models;
 
-import javax.persistence.Enumerated;
-
 public enum Origin {
-    TURKEY("Türkiye", "Turkey", "+90",90),
-    UNITED_KINGDOM("Birleşik Krallık", "United Kingdom", "+44",44),
-    CHINA("Çin", "China","+86",86);
+    TURKEY("Türkiye", "Turkey", "+90", 90),
+    UNITED_KINGDOM("Birleşik Krallık", "United Kingdom", "+44", 44),
+    CHINA("Çin", "China", "+86", 86);
 
     private String readingTurkish;
     private String readingEnglish;

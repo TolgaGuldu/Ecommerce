@@ -15,8 +15,8 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .components(new Components())
                 .info(new Info()
-                        .title("Satış Garanti Spring API Portal")
-                        .description("Emrullah Durumlu & Tolga Güldütuna - Spring Project")
+                        .title("Ecommerce Spring API Portal")
+                        .description("Tolga Güldütuna - Spring Project")
                         .version("1.0.0")
                 );
     }
@@ -29,6 +29,21 @@ public class SwaggerConfig {
     @Bean
     GroupedOpenApi category() {
         return GroupedOpenApi.builder().group("category").pathsToMatch("/category/**").build();
+    }
+
+    @Bean
+    GroupedOpenApi product() {
+        return GroupedOpenApi.builder().group("product").pathsToMatch("/product/**").build();
+    }
+
+    @Bean
+    GroupedOpenApi price() {
+        return GroupedOpenApi.builder().group("price").pathsToMatch("/price/**").build();
+    }
+
+    @Bean
+    GroupedOpenApi stock() {
+        return GroupedOpenApi.builder().group("stock").pathsToMatch("/stock/**").build();
     }
 
 }

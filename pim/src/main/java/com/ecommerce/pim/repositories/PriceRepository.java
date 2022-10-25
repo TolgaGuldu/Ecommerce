@@ -1,6 +1,5 @@
 package com.ecommerce.pim.repositories;
 
-import com.ecommerce.pim.models.Category;
 import com.ecommerce.pim.models.Price;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

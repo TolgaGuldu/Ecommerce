@@ -23,4 +23,7 @@ public class Order extends BaseEntity {
     @JoinColumn(name = "address_id")
     private Address address;
 
+    @Column(name = "order_total_price")
+    private double orderTotalPrice;
+
 }

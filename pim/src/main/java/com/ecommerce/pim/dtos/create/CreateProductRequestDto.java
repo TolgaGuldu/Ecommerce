@@ -6,8 +6,6 @@ import com.ecommerce.pim.models.Price;
 import com.ecommerce.pim.models.Stock;
 import lombok.Data;
 
-import javax.persistence.*;
-
 @Data
 public class CreateProductRequestDto {
     private String name;
