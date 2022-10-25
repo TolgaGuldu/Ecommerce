@@ -55,7 +55,7 @@ public class ValidationHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.badRequest().body(result);
     }
 
-    @Override
+   /* @Override
     protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         return ResponseEntity.ok(new ErrorResult(String.valueOf(HttpStatus.NOT_FOUND.value()), "Aradığınız sayfa bulunamadı."));
     }
@@ -123,5 +123,5 @@ public class ValidationHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleHttpMediaTypeNotSupported(HttpMediaTypeNotSupportedException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         return ResponseEntity.ok(new ErrorResult(String.valueOf(HttpStatus.NOT_FOUND.value()), "Aradığınız sayfa bulunamadı."));
-    }
+    }*/
 }

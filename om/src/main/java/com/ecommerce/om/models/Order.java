@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created on 25 October, 2022
@@ -23,7 +24,7 @@ import javax.persistence.*;
 public class Order extends BaseEntity {
 
     @Column(name = "product_ids")
-    private Long[] productIds;
+    private Long productIds;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id")

@@ -1,6 +1,7 @@
 package com.ecommerce.om.controllers;
 
 import com.ecommerce.om.dtos.create.CreateOrderRequestDto;
+import com.ecommerce.om.dtos.other.ResponseDto;
 import com.ecommerce.om.dtos.update.UpdateActiveRequestDto;
 import com.ecommerce.om.dtos.update.UpdateOrderRequestDto;
 import com.ecommerce.om.services.OrderService;
@@ -25,6 +26,12 @@ public class OrderController {
     @Autowired
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Object> getUser(@PathVariable("id") Long orderId){
+        ResponseDto responseDto = orderService.getOrder(orderId);
+        return ResponseEntity.ok(responseDto);
     }
 
 

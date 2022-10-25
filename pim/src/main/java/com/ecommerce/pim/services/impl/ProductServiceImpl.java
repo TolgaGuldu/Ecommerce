@@ -41,10 +41,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Result getProductById(String id) {
-        boolean businessRule = productRepository.existsProductByIdAndStatusAndLocked(Long.parseLong(id), '1', '0');
+    public Result getProductById(long id) {
+        boolean businessRule = productRepository.existsProductByIdAndStatusAndLocked(id, '1', '0');
         if (businessRule)
-            return new SuccessDataResult<>(productRepository.findById(Long.parseLong(id)));
+            return new SuccessDataResult<>(productRepository.findById(id));
         return new ErrorDataResult(messageSource.getMessage(Constant.ERROR_ID, null, Locale.getDefault()));
     }
 

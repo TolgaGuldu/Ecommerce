@@ -21,7 +21,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "product")
 public class Product extends BaseEntity {
-    @Basic(optional = false)
+    //@Basic(optional = false)
     @Column(name = "name")
     private String name;
 

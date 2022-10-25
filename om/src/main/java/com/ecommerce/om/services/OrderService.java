@@ -3,6 +3,7 @@ package com.ecommerce.om.services;
 import com.ecommerce.om.common.results.DataResult;
 import com.ecommerce.om.common.results.Result;
 import com.ecommerce.om.dtos.create.CreateOrderRequestDto;
+import com.ecommerce.om.dtos.other.ResponseDto;
 import com.ecommerce.om.dtos.update.UpdateActiveRequestDto;
 import com.ecommerce.om.dtos.update.UpdateOrderRequestDto;
 import com.ecommerce.om.models.Order;
@@ -17,6 +18,7 @@ import java.util.List;
 
 public interface OrderService {
 
+    ResponseDto getOrder(Long orderId);
 
     Result getOrderById(String id);
 

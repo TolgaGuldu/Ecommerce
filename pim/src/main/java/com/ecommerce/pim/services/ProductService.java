@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 public interface ProductService {
-    Result getProductById(String id);
+    Result getProductById(long id);
 
     DataResult<List<Product>> getProductByActive(int page, int limit, String type);
 

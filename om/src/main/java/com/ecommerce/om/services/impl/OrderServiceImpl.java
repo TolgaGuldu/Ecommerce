@@ -3,6 +3,9 @@ package com.ecommerce.om.services.impl;
 import com.ecommerce.om.common.constants.Constant;
 import com.ecommerce.om.common.results.*;
 import com.ecommerce.om.dtos.create.CreateOrderRequestDto;
+import com.ecommerce.om.dtos.other.OrderDto;
+import com.ecommerce.om.dtos.other.ProductDto;
+import com.ecommerce.om.dtos.other.ResponseDto;
 import com.ecommerce.om.dtos.update.UpdateActiveRequestDto;
 import com.ecommerce.om.dtos.update.UpdateOrderRequestDto;
 import com.ecommerce.om.models.Order;
@@ -16,7 +19,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Locale;
@@ -34,10 +39,48 @@ public class OrderServiceImpl implements OrderService {
 
     private final MessageSource messageSource;
 
+    private final RestTemplate restTemplate;
+
     @Autowired
-    public OrderServiceImpl(OrderRepository orderRepository, MessageSource messageSource) {
+    public OrderServiceImpl(OrderRepository orderRepository, MessageSource messageSource, RestTemplate restTemplate) {
         this.orderRepository = orderRepository;
         this.messageSource = messageSource;
+        this.restTemplate = restTemplate;
+    }
+
+    @Override
+    public ResponseDto getOrder(Long orderId) {
+        ResponseDto responseDto = new ResponseDto();
+        Order order = orderRepository.findById(orderId).get();
+        OrderDto orderDto = mapToUser(order);
+
+        ResponseEntity<ProductDto> responseEntity = restTemplate
+                .getForEntity("http://localhost:8081/product/" + order.getProductIds(),
+                        ProductDto.class);
+
+        ProductDto productDto = responseEntity.getBody();
+
+        System.out.println(responseEntity.getStatusCode());
+
+        responseDto.setOrderDto(orderDto);
+        responseDto.setProductDto(productDto);
+
+        return responseDto;
+    }
+
+    private OrderDto mapToUser(Order order){
+        OrderDto orderDto = new OrderDto();
+        orderDto.setProductIds(order.getProductIds());
+        orderDto.setAddress(order.getAddress());
+        orderDto.setOrderTotalPrice(order.getOrderTotalPrice());
+        orderDto.setAddedBy(order.getAddedBy());
+        orderDto.setAddedDate(order.getAddedDate());
+        orderDto.setModifiedBy(order.getModifiedBy());
+        orderDto.setModifiedDate(order.getModifiedDate());
+        orderDto.setActive(order.getActive());
+        orderDto.setLocked(order.getLocked());
+        orderDto.setStatus(order.getStatus());
+        return orderDto;
     }
 
     @Override

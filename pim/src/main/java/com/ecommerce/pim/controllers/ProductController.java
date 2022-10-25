@@ -28,7 +28,12 @@ public class ProductController {
     }
 
     @GetMapping("/getById")
-    public ResponseEntity<?> getByProductId(@RequestParam String id) {
+    public ResponseEntity<?> getByProductId(@RequestParam Long id) {
+        return ResponseEntity.ok(productService.getProductById(id));
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<?> getDepartmentById(@PathVariable("id") Long id){
         return ResponseEntity.ok(productService.getProductById(id));
     }
 

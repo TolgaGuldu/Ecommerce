@@ -25,7 +25,7 @@ import java.sql.SQLException;
 @ControllerAdvice
 public class GlobalExceptions {
 
-    @ExceptionHandler(ArithmeticException.class)
+   /* @ExceptionHandler(ArithmeticException.class)
     @ResponseBody
     protected ResponseEntity<Object> transactionExceptionHandler(WebRequest request, ArithmeticException ex) {
         return ResponseEntity.ok(new ErrorResult(String.valueOf(HttpStatus.RESET_CONTENT.value()), "işleminizi gerçekleştiremiyoruz"));
@@ -70,6 +70,6 @@ public class GlobalExceptions {
     @ExceptionHandler(JsonParseException.class)
     public ResponseEntity<Object> handleException(WebRequest request, JsonParseException ex) {
         return ResponseEntity.ok(new ErrorResult(String.valueOf(HttpStatus.RESET_CONTENT.value()), "Lütfen değer giriniz"));
-    }
+    }*/
 
 }
