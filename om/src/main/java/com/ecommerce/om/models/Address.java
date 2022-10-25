@@ -13,7 +13,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "price")
+@Table(name = "address_list")
 public class Address extends BaseEntity {
+    @OneToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "address")
+    private String address;
 
 }
