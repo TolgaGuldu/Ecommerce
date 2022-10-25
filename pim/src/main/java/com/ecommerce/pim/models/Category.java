@@ -27,7 +27,7 @@ public class Category extends BaseEntity {
     private Set<Category> subCategories;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "parent_category_id")
+    //@JoinColumn(name = "parent_category_id")
     private Category parentCategory;
 
     @JsonIgnore

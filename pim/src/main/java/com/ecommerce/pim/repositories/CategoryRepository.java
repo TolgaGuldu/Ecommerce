@@ -8,26 +8,34 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-
-    @Query("SELECT c FROM Category c WHERE c.id = :id and c.status = true and c.locked= false")
+    @Query("SELECT c FROM Category c WHERE c.id = :id and c.status = '1' and c.locked= '0'")
     List<Category> findById(long id);
 
-    @Query("SELECT c FROM Category c WHERE c.categoryTitle = :categoryTitle and c.status = true and c.locked= false")
+    @Query("SELECT c FROM Category c WHERE c.categoryTitle = :categoryTitle and c.status = '1' and c.locked= '0'")
     List<Category> findByCategoryTitle(String categoryTitle);
 
-    @Query("SELECT c FROM Category c WHERE c.status =true and c.locked= false")
+
+    @Query("SELECT c FROM Category c WHERE c.status ='1' and c.locked= '0'")
     Page<Category> findAll(Pageable pageable);
 
-    Category findByIdAndStatusAndLocked(long id,boolean status,boolean locked);
+    @Query("SELECT c FROM Category c WHERE c.active='0' and c.status ='1' and c.locked= '0'")
+    Page<Category> findNonActiveAll(Pageable pageable);
 
-    boolean existsCategoryByIdAndStatusAndLocked(Long id,boolean status,boolean locked);
+    @Query("SELECT c FROM Category c WHERE c.active='1' and c.status ='1' and c.locked= '0'")
+    Page<Category> findActiveAll(Pageable pageable);
 
-    boolean existsByCategoryTitleIgnoreCaseAndStatusAndLocked(String categoryTitle,boolean status,boolean locked);
+    Category findByIdAndStatusAndLocked(Long id, char status, char locked);
 
+    Category findByCategoryTitleAndStatusAndLocked(String categoryTitle, char status, char locked);
+
+    Category deleteByCategoryTitle(String categoryTitle);
+
+    boolean existsCategoryByIdAndStatusAndLocked(Long id, char status, char locked);
+
+    boolean existsByCategoryTitleIgnoreCaseAndStatusAndLocked(String categoryTitle, char status, char locked);
 
 }

@@ -1,6 +1,7 @@
 package com.ecommerce.pim.utils.mappers;
 
 import com.ecommerce.pim.dtos.create.CreateCategoryRequestDto;
+import com.ecommerce.pim.dtos.update.UpdateActiveRequestDto;
 import com.ecommerce.pim.dtos.update.UpdateCategoryRequestDto;
 import com.ecommerce.pim.models.Category;
 
@@ -22,9 +23,9 @@ public class CategoryMapper {
         category.setAddedDate(new Date());
         category.setModifiedBy(0);
         category.setModifiedDate(new Date());
-        category.setActive(true);
-        category.setLocked(false);
-        category.setStatus(true);
+        category.setActive('1');
+        category.setLocked('0');
+        category.setStatus('1');
         return category;
     }
 
@@ -36,6 +37,11 @@ public class CategoryMapper {
         updatedCategory.setProducts(updateCategoryRequestDto.getProducts());
         updatedCategory.setModifiedBy(0);
         updatedCategory.setModifiedDate(new Date());
+        return updatedCategory;
+    }
+
+    public static Category categoryUpdateActiveMapper(UpdateActiveRequestDto updateActiveRequestDto, Category updatedCategory){
+        updatedCategory.setActive(updateActiveRequestDto.getActive().charAt(0));
         return updatedCategory;
     }
 

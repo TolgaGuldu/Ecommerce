@@ -26,4 +26,9 @@ public class SwaggerConfig {
         return GroupedOpenApi.builder().group("all").pathsToMatch("/**/**").build();
     }
 
+    @Bean
+    GroupedOpenApi category() {
+        return GroupedOpenApi.builder().group("category").pathsToMatch("/category/**").build();
+    }
+
 }

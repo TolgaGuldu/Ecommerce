@@ -31,13 +31,13 @@ public class BaseEntity {
     private Date modifiedDate;
 
     @Column(name = "active")
-    private boolean active;
+    private char active;
 
     @JsonIgnore
     @Column(name = "locked")
-    private boolean locked;
+    private char locked;
 
     @JsonIgnore
     @Column(name = "status")
-    private boolean status;
+    private char status;
 }
