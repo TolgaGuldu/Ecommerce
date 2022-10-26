@@ -1,0 +1,3238 @@
+{
+	"info": {
+		"_postman_id": "18dae418-9337-49bc-8391-08533809ac5c",
+		"name": "Ecommerce  Pim Spring API Portal",
+		"description": "Tolga Güldütuna - Spring Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stock",
+			"item": [
+				{
+					"name": "{{baseUrl}}/stock/update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"<integer>\",\n  \"available\": \"<boolean>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/stock/update?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": \"<integer>\",\n  \"available\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/stock/update?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/updateActive",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/stock/updateActive?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"updateActive"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"active\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/stock/updateActive?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"updateActive"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": \"<integer>\",\n  \"available\": \"<boolean>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/stock/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": \"<integer>\",\n  \"available\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/stock/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/getByNonActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/getByNonActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"getByNonActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/getByNonActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"getByNonActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/getById?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/getById?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"getById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/getByActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/getByActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"getByActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/getByActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"getByActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/getAllPage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/getAllPage?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/getAllPage?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"getAllPage"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/getAllList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/getAllList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"getAllList"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/getAllList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"getAllList"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/softDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/softDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"softDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/softDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"softDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/stock/hardDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/stock/hardDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"stock",
+								"hardDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/stock/hardDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"stock",
+										"hardDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "{{baseUrl}}/product/update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"pictureUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\",\n  \"height\": \"<double>\",\n  \"weight\": \"<double>\",\n  \"categoryid\": \"<long>\",\n  \"price\": \"<double>\",\n  \"stock\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/update?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"pictureUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\",\n  \"height\": \"<double>\",\n  \"weight\": \"<double>\",\n  \"categoryid\": \"<long>\",\n  \"price\": \"<double>\",\n  \"stock\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/update?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/updateActive",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/updateActive?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"updateActive"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"active\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/updateActive?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"updateActive"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"pictureUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\",\n  \"height\": \"<double>\",\n  \"weight\": \"<double>\",\n  \"category\": {\n    \"categoryTitle\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"subCategories\": [\n      {\n        \"id\": \"<long>\",\n        \"addedBy\": \"<long>\",\n        \"addedDate\": \"<dateTime>\",\n        \"modifiedBy\": \"<long>\",\n        \"modifiedDate\": \"<dateTime>\",\n        \"active\": \"<string>\",\n        \"categoryTitle\": \"<string>\",\n        \"imageUrl\": \"<string>\",\n        \"parentCategory\": {\n          \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n        }\n      }\n    ],\n    \"parentCategory\": {\n      \"id\": \"<long>\",\n      \"addedBy\": \"<long>\",\n      \"addedDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<long>\",\n      \"modifiedDate\": \"<dateTime>\",\n      \"active\": \"<string>\",\n      \"categoryTitle\": \"<string>\",\n      \"imageUrl\": \"<string>\",\n      \"parentCategory\": {\n        \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n      }\n    }\n  },\n  \"price\": {\n    \"price\": \"<double>\",\n    \"currency\": \"<string>\"\n  },\n  \"stock\": {\n    \"amount\": \"<integer>\",\n    \"available\": \"<boolean>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"pictureUrl\": \"<string>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\",\n  \"height\": \"<double>\",\n  \"weight\": \"<double>\",\n  \"category\": {\n    \"categoryTitle\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"subCategories\": [\n      {\n        \"id\": \"<long>\",\n        \"addedBy\": \"<long>\",\n        \"addedDate\": \"<dateTime>\",\n        \"modifiedBy\": \"<long>\",\n        \"modifiedDate\": \"<dateTime>\",\n        \"active\": \"<string>\",\n        \"categoryTitle\": \"<string>\",\n        \"imageUrl\": \"<string>\",\n        \"parentCategory\": {\n          \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n        }\n      }\n    ],\n    \"parentCategory\": {\n      \"id\": \"<long>\",\n      \"addedBy\": \"<long>\",\n      \"addedDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<long>\",\n      \"modifiedDate\": \"<dateTime>\",\n      \"active\": \"<string>\",\n      \"categoryTitle\": \"<string>\",\n      \"imageUrl\": \"<string>\",\n      \"parentCategory\": {\n        \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n      }\n    }\n  },\n  \"price\": {\n    \"price\": \"<double>\",\n    \"currency\": \"<string>\"\n  },\n  \"stock\": {\n    \"amount\": \"<integer>\",\n    \"available\": \"<boolean>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/product/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<long>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/getByNonActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/getByNonActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"getByNonActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/getByNonActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"getByNonActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/getById?id=<long>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<long>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/getById?id=<long>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"getById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<long>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/getByActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/getByActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"getByActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/getByActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"getByActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/getAllPage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/getAllPage?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/getAllPage?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"getAllPage"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/getAllList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/getAllList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"getAllList"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/getAllList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"getAllList"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/softDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/softDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"softDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/softDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"softDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/product/hardDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/product/hardDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"hardDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/hardDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										"hardDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "price",
+			"item": [
+				{
+					"name": "{{baseUrl}}/price/update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"price\": \"<double>\",\n  \"currency\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price/update?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"price\": \"<double>\",\n  \"currency\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/price/update?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/updateActive",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price/updateActive?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"updateActive"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"active\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/price/updateActive?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"updateActive"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"price\": \"<double>\",\n  \"currency\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"price\": \"<double>\",\n  \"currency\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/price/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/getByNonActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/getByNonActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"getByNonActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/getByNonActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"getByNonActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/getById?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/getById?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"getById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/getByActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/getByActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"getByActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/getByActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"getByActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/getAllPage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/getAllPage?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/getAllPage?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"getAllPage"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/getAllList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/getAllList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"getAllList"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/getAllList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"getAllList"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/softDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/softDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"softDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/softDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"softDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/price/hardDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/price/hardDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price",
+								"hardDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/price/hardDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"price",
+										"hardDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "{{baseUrl}}/category/update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"categoryTitle\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"subCategories\": [\n    {\n      \"id\": \"<long>\",\n      \"addedBy\": \"<long>\",\n      \"addedDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<long>\",\n      \"modifiedDate\": \"<dateTime>\",\n      \"active\": \"<string>\",\n      \"categoryTitle\": \"<string>\",\n      \"imageUrl\": \"<string>\",\n      \"parentCategory\": {\n        \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n      }\n    }\n  ],\n  \"parentCategory\": {\n    \"id\": \"<long>\",\n    \"addedBy\": \"<long>\",\n    \"addedDate\": \"<dateTime>\",\n    \"modifiedBy\": \"<long>\",\n    \"modifiedDate\": \"<dateTime>\",\n    \"active\": \"<string>\",\n    \"categoryTitle\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"parentCategory\": {\n      \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/update?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"categoryTitle\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"subCategories\": [\n    {\n      \"id\": \"<long>\",\n      \"addedBy\": \"<long>\",\n      \"addedDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<long>\",\n      \"modifiedDate\": \"<dateTime>\",\n      \"active\": \"<string>\",\n      \"categoryTitle\": \"<string>\",\n      \"imageUrl\": \"<string>\",\n      \"parentCategory\": {\n        \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n      }\n    }\n  ],\n  \"parentCategory\": {\n    \"id\": \"<long>\",\n    \"addedBy\": \"<long>\",\n    \"addedDate\": \"<dateTime>\",\n    \"modifiedBy\": \"<long>\",\n    \"modifiedDate\": \"<dateTime>\",\n    \"active\": \"<string>\",\n    \"categoryTitle\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"parentCategory\": {\n      \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/update?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/updateActive",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"active\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/updateActive?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"updateActive"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"active\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/updateActive?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"updateActive"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"categoryTitle\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"subCategories\": [\n    {\n      \"id\": \"<long>\",\n      \"addedBy\": \"<long>\",\n      \"addedDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<long>\",\n      \"modifiedDate\": \"<dateTime>\",\n      \"active\": \"<string>\",\n      \"categoryTitle\": \"<string>\",\n      \"imageUrl\": \"<string>\",\n      \"parentCategory\": {\n        \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n      }\n    }\n  ],\n  \"parentCategory\": {\n    \"id\": \"<long>\",\n    \"addedBy\": \"<long>\",\n    \"addedDate\": \"<dateTime>\",\n    \"modifiedBy\": \"<long>\",\n    \"modifiedDate\": \"<dateTime>\",\n    \"active\": \"<string>\",\n    \"categoryTitle\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"parentCategory\": {\n      \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"categoryTitle\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"subCategories\": [\n    {\n      \"id\": \"<long>\",\n      \"addedBy\": \"<long>\",\n      \"addedDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<long>\",\n      \"modifiedDate\": \"<dateTime>\",\n      \"active\": \"<string>\",\n      \"categoryTitle\": \"<string>\",\n      \"imageUrl\": \"<string>\",\n      \"parentCategory\": {\n        \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n      }\n    }\n  ],\n  \"parentCategory\": {\n    \"id\": \"<long>\",\n    \"addedBy\": \"<long>\",\n    \"addedDate\": \"<dateTime>\",\n    \"modifiedBy\": \"<long>\",\n    \"modifiedDate\": \"<dateTime>\",\n    \"active\": \"<string>\",\n    \"categoryTitle\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"parentCategory\": {\n      \"value\": \"<Circular reference to #/components/schemas/Category detected>\"\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/getByNonActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/getByNonActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"getByNonActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/getByNonActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"getByNonActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/getById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/getById?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/getById?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"getById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/getByCategoryTitle",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/getByCategoryTitle?categoryTitle=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"getByCategoryTitle"
+							],
+							"query": [
+								{
+									"key": "categoryTitle",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/getByCategoryTitle?categoryTitle=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"getByCategoryTitle"
+									],
+									"query": [
+										{
+											"key": "categoryTitle",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/getByActive",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/getByActive?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"getByActive"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/getByActive?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"getByActive"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/getAllPage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/getAllPage?page=1&limit=10&type=id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"getAllPage"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/getAllPage?page=1&limit=10&type=id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"getAllPage"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/getAllList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/getAllList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"getAllList"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/getAllList",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"getAllList"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/softDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/softDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"softDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/softDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"softDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/softDeletebyCategoryTitle",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/softDeletebyCategoryTitle?categoryTitle=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"softDeletebyCategoryTitle"
+							],
+							"query": [
+								{
+									"key": "categoryTitle",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/softDeletebyCategoryTitle?categoryTitle=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"softDeletebyCategoryTitle"
+									],
+									"query": [
+										{
+											"key": "categoryTitle",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/hardDeletebyId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/hardDeletebyId?id=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"hardDeletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/hardDeletebyId?id=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"hardDeletebyId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				},
+				{
+					"name": "{{baseUrl}}/category/hardDeletebyCategoryTitle",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/category/hardDeletebyCategoryTitle?categoryTitle=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"hardDeletebyCategoryTitle"
+							],
+							"query": [
+								{
+									"key": "categoryTitle",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/category/hardDeletebyCategoryTitle?categoryTitle=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										"hardDeletebyCategoryTitle"
+									],
+									"query": [
+										{
+											"key": "categoryTitle",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "<object>"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}
