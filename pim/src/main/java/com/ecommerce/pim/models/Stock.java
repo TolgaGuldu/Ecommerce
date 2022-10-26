@@ -9,7 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -27,7 +27,4 @@ public class Stock extends BaseEntity {
     @Column(name = "available")
     private Boolean available;
 
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
 }

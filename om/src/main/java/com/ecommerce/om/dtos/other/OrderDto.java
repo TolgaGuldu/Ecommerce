@@ -2,24 +2,30 @@ package com.ecommerce.om.dtos.other;
 
 import com.ecommerce.om.models.Address;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Column;
+import javax.validation.constraints.Positive;
 import java.util.Date;
 import java.util.List;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
 
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderDto {
 
     private long id;
 
-    private Long productIds;
+    private String productIds;
 
     private Address address;
 

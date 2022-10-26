@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -35,10 +35,5 @@ public class Category extends BaseEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "parent_category_id")
     private Category parentCategory;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Column(name = "product_id")
-    private Set<Product> products;
 
 }

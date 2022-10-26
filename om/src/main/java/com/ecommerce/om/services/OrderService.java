@@ -11,14 +11,14 @@ import com.ecommerce.om.models.Order;
 import java.util.List;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
 
 public interface OrderService {
 
-    ResponseDto getOrder(Long orderId);
+    Result getOrder(Long orderId, ResponseDto responseDto);
 
     Result getOrderById(String id);
 

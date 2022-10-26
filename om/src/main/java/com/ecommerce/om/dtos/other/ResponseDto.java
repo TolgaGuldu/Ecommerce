@@ -1,10 +1,14 @@
 package com.ecommerce.om.dtos.other;
 
-import com.ecommerce.om.dtos.create.CreateOrderRequestDto;
-import lombok.Data;
+import lombok.*;
 
-@Data
+import java.util.List;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ResponseDto {
-    private ProductDto productDto;
+    private List<ProductDto> productDto;
     private OrderDto orderDto;
 }

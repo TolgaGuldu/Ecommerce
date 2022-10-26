@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */

@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -137,7 +137,7 @@ public class CategoryServiceImpl implements CategoryService {
             return new SuccessResult();
         }
 
-        return new ErrorResult(String.valueOf(HttpStatus.RESET_CONTENT.value()), messageSource.getMessage(Constant.ERROR_CATEGORYTITLE, null, Locale.getDefault()));
+        return new ErrorResult(String.valueOf(HttpStatus.RESET_CONTENT.value()), messageSource.getMessage(Constant.ERROR_ID, null, Locale.getDefault()));
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.ecommerce.om.common.results;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */

@@ -8,7 +8,7 @@ import com.ecommerce.pim.models.Stock;
 import java.util.Date;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -21,7 +21,6 @@ public class StockMapper {
         Stock stock = new Stock();
         stock.setAmount(createStockRequestDto.getAmount());
         stock.setAvailable(createStockRequestDto.getAvailable());
-        stock.setProduct(createStockRequestDto.getProduct());
         stock.setAddedBy(0);
         stock.setAddedDate(new Date());
         stock.setModifiedBy(0);
@@ -33,9 +32,8 @@ public class StockMapper {
     }
 
     public static Stock stockUpdateMapper(UpdateStockRequestDto updateStockRequestDto, Stock updatedStock) {
-        updatedStock.setAmount(updatedStock.getAmount());
-        updatedStock.setAvailable(updatedStock.getAvailable());
-        updatedStock.setProduct(updatedStock.getProduct());
+        updatedStock.setAmount(updateStockRequestDto.getAmount());
+        updatedStock.setAvailable(updateStockRequestDto.getAvailable());
         updatedStock.setModifiedBy(0);
         updatedStock.setModifiedDate(new Date());
         return updatedStock;

@@ -8,7 +8,7 @@ import com.ecommerce.pim.models.Category;
 import java.util.Date;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -24,7 +24,6 @@ public class CategoryMapper {
         category.setParentCategory(createCategoryRequestDto.getParentCategory());
         category.setSubCategories(createCategoryRequestDto.getSubCategories());
         category.setImageUrl(createCategoryRequestDto.getImageUrl());
-        category.setProducts(createCategoryRequestDto.getProducts());
         category.setAddedBy(0);
         category.setAddedDate(new Date());
         category.setModifiedBy(0);
@@ -40,7 +39,6 @@ public class CategoryMapper {
         updatedCategory.setParentCategory(updateCategoryRequestDto.getParentCategory());
         updatedCategory.setSubCategories(updateCategoryRequestDto.getSubCategories());
         updatedCategory.setImageUrl(updateCategoryRequestDto.getImageUrl());
-        updatedCategory.setProducts(updateCategoryRequestDto.getProducts());
         updatedCategory.setModifiedBy(0);
         updatedCategory.setModifiedDate(new Date());
         return updatedCategory;

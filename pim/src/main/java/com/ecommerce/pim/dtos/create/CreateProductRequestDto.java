@@ -7,7 +7,7 @@ import com.ecommerce.pim.models.Stock;
 import lombok.Data;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -26,9 +26,9 @@ public class CreateProductRequestDto {
 
     private double weight;
 
-    private Category category;
+    private CreateCategoryRequestDto category;
 
-    private Price price;
+    private CreatePriceRequestDto price;
 
-    private Stock stock;
+    private CreateStockRequestDto stock;
 }

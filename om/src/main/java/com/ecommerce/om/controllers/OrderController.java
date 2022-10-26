@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -29,9 +29,8 @@ public class OrderController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Object> getUser(@PathVariable("id") Long orderId){
-        ResponseDto responseDto = orderService.getOrder(orderId);
-        return ResponseEntity.ok(responseDto);
+    public ResponseEntity<?> getOrder(@PathVariable("id") Long orderId){
+        return ResponseEntity.ok(orderService.getOrder(orderId,new ResponseDto()));
     }
 
 

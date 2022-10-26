@@ -8,7 +8,7 @@ import com.ecommerce.pim.models.Product;
 import java.util.Date;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -27,9 +27,6 @@ public class ProductMapper {
         product.setOrigin(createProductRequestDto.getOrigin());
         product.setHeight(createProductRequestDto.getHeight());
         product.setWeight(createProductRequestDto.getWeight());
-        product.setCategory(createProductRequestDto.getCategory());
-        product.setPrice(createProductRequestDto.getPrice());
-        product.setStock(createProductRequestDto.getStock());
         product.setAddedBy(0);
         product.setAddedDate(new Date());
         product.setModifiedBy(0);
@@ -41,15 +38,20 @@ public class ProductMapper {
     }
 
     public static Product productUpdateMapper(UpdateProductRequestDto updateProductRequestDto, Product updatedProduct){
-        updatedProduct.setName(updateProductRequestDto.getName());
-        updatedProduct.setPictureUrl(updateProductRequestDto.getPictureUrl());
-        updatedProduct.setDescription(updateProductRequestDto.getDescription());
-        updatedProduct.setOrigin(updateProductRequestDto.getOrigin());
-        updatedProduct.setHeight(updateProductRequestDto.getHeight());
-        updatedProduct.setWeight(updateProductRequestDto.getWeight());
-        updatedProduct.setCategory(updateProductRequestDto.getCategory());
-        updatedProduct.setPrice(updateProductRequestDto.getPrice());
-        updatedProduct.setStock(updateProductRequestDto.getStock());
+        if(updateProductRequestDto.getName() != null)
+            updatedProduct.setName(updateProductRequestDto.getName());
+        if(updateProductRequestDto.getPictureUrl() != null)
+            updatedProduct.setPictureUrl(updateProductRequestDto.getPictureUrl());
+        if(updateProductRequestDto.getDescription() != null)
+            updatedProduct.setDescription(updateProductRequestDto.getDescription());
+        if(updateProductRequestDto.getOrigin() != null)
+            updatedProduct.setOrigin(updateProductRequestDto.getOrigin());
+        if(updateProductRequestDto.getHeight() != null)
+            updatedProduct.setHeight(updateProductRequestDto.getHeight());
+        if(updateProductRequestDto.getWeight() != null)
+            updatedProduct.setWeight(updateProductRequestDto.getWeight());
+        if(updateProductRequestDto.getCategoryid() != null)
+            updatedProduct.getCategory().setId(updateProductRequestDto.getCategoryid());
         updatedProduct.setModifiedBy(0);
         updatedProduct.setModifiedDate(new Date());
         return updatedProduct;

@@ -9,7 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -21,9 +21,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "address_list")
 public class Address extends BaseEntity {
-    @OneToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
 
     @Column(name = "description")
     private String description;

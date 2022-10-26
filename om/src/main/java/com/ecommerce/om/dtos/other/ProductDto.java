@@ -1,10 +1,15 @@
 package com.ecommerce.om.dtos.other;
 
 import com.ecommerce.om.models.Origin;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductDto {
+    private Long id;
+
     private String name;
 
     private String pictureUrl;
@@ -17,9 +22,9 @@ public class ProductDto {
 
     private double weight;
 
-    private Long category_id;
+    private CategoryDto category;
 
-    private Long price_id;
+    private PriceDto price;
 
-    private Long stock_id;
+    private StockDto stock;
 }

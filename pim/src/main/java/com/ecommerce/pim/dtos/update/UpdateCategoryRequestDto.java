@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.Set;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -27,6 +27,4 @@ public class UpdateCategoryRequestDto {
 
     private Category parentCategory;
 
-
-    private Set<Product> products;
 }

@@ -4,7 +4,7 @@ import com.ecommerce.pim.models.Product;
 import lombok.Data;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -15,5 +15,4 @@ public class UpdateStockRequestDto {
 
     private Boolean available;
 
-    private Product product;
 }

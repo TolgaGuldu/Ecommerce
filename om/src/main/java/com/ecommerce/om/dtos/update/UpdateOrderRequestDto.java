@@ -3,10 +3,12 @@ package com.ecommerce.om.dtos.update;
 import com.ecommerce.om.models.Address;
 import lombok.Data;
 
+import javax.validation.constraints.Positive;
 import java.util.List;
 
+
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -14,7 +16,7 @@ import java.util.List;
 @Data
 public class UpdateOrderRequestDto {
 
-    private Long productIds;
+    private List<@Positive String> productIds;
 
     private Address address;
 

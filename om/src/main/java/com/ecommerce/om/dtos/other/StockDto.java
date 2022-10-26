@@ -1,6 +1,5 @@
-package com.ecommerce.pim.dtos.create;
+package com.ecommerce.om.dtos.other;
 
-import com.ecommerce.pim.models.Product;
 import lombok.Data;
 
 /**
@@ -10,7 +9,7 @@ import lombok.Data;
  */
 
 @Data
-public class CreateStockRequestDto {
+public class StockDto {
     private int amount;
 
     private Boolean available;

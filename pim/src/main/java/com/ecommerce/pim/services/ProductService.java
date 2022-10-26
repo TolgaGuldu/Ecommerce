@@ -7,16 +7,19 @@ import com.ecommerce.pim.dtos.update.UpdateActiveRequestDto;
 import com.ecommerce.pim.dtos.update.UpdateProductRequestDto;
 import com.ecommerce.pim.models.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
 
 public interface ProductService {
     Result getProductById(long id);
+
+    Product getProductByIdList(Long idList);
 
     DataResult<List<Product>> getProductByActive(int page, int limit, String type);
 

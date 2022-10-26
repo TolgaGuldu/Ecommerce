@@ -7,10 +7,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -22,9 +24,9 @@ import java.util.List;
 @Entity
 @Table(name = "order_list")
 public class Order extends BaseEntity {
-
+    //@Basic
     @Column(name = "product_ids")
-    private Long productIds;
+    private String productIds;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "address_id")

@@ -7,7 +7,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.PositiveOrZero;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */

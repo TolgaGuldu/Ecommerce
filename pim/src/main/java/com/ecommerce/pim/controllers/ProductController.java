@@ -3,15 +3,17 @@ package com.ecommerce.pim.controllers;
 import com.ecommerce.pim.dtos.create.CreateProductRequestDto;
 import com.ecommerce.pim.dtos.update.UpdateActiveRequestDto;
 import com.ecommerce.pim.dtos.update.UpdateProductRequestDto;
+import com.ecommerce.pim.models.Product;
 import com.ecommerce.pim.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -32,9 +34,9 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
-    @GetMapping("{id}")
-    public ResponseEntity<?> getDepartmentById(@PathVariable("id") Long id){
-        return ResponseEntity.ok(productService.getProductById(id));
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getProductByIdList(@PathVariable("id") Long idList){
+        return ResponseEntity.ok(productService.getProductByIdList(idList));
     }
 
     @GetMapping("/getByActive")

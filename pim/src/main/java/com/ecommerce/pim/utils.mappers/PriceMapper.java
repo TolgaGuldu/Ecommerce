@@ -8,7 +8,7 @@ import com.ecommerce.pim.models.Price;
 import java.util.Date;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -20,7 +20,6 @@ public class PriceMapper {
     public static Price priceCreateMapper(CreatePriceRequestDto createPriceRequestDto) {
         Price price = new Price();
         price.setPrice(createPriceRequestDto.getPrice());
-        price.setProduct(createPriceRequestDto.getProduct());
         price.setCurrency(createPriceRequestDto.getCurrency());
         price.setAddedBy(0);
         price.setAddedDate(new Date());
@@ -33,9 +32,8 @@ public class PriceMapper {
     }
 
     public static Price priceUpdateMapper(UpdatePriceRequestDto updatePriceRequestDto, Price updatedPrice) {
-        updatedPrice.setPrice(updatedPrice.getPrice());
-        updatedPrice.setProduct(updatedPrice.getProduct());
-        updatedPrice.setCurrency(updatedPrice.getCurrency());
+        updatedPrice.setPrice(updatePriceRequestDto.getPrice());
+        updatedPrice.setCurrency(updatePriceRequestDto.getCurrency());
         updatedPrice.setModifiedBy(0);
         updatedPrice.setModifiedDate(new Date());
         return updatedPrice;

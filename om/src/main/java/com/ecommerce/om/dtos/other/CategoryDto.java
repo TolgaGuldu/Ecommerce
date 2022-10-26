@@ -1,7 +1,6 @@
-package com.ecommerce.pim.dtos.create;
+package com.ecommerce.om.dtos.other;
 
-import com.ecommerce.pim.models.Category;
-import com.ecommerce.pim.models.Product;
+
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -14,7 +13,7 @@ import java.util.Set;
  */
 
 @Data
-public class CreateCategoryRequestDto {
+public class CategoryDto {
     @NotBlank
     private String categoryTitle;
 
@@ -22,9 +21,9 @@ public class CreateCategoryRequestDto {
     private String imageUrl;
 
 
-    private Set<Category> subCategories;
+    private Set<CategoryDto> subCategories;
 
 
-    private Category parentCategory;
+    private CategoryDto parentCategory;
 
 }

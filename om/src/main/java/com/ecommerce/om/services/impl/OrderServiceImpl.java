@@ -12,6 +12,8 @@ import com.ecommerce.om.models.Order;
 import com.ecommerce.om.repositories.OrderRepository;
 import com.ecommerce.om.services.OrderService;
 import com.ecommerce.om.utils.mappers.OrderMapper;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Page;
@@ -27,10 +29,12 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
+
+
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -39,48 +43,21 @@ public class OrderServiceImpl implements OrderService {
 
     private final MessageSource messageSource;
 
-    private final RestTemplate restTemplate;
-
     @Autowired
-    public OrderServiceImpl(OrderRepository orderRepository, MessageSource messageSource, RestTemplate restTemplate) {
+    public OrderServiceImpl(OrderRepository orderRepository, MessageSource messageSource) {
         this.orderRepository = orderRepository;
         this.messageSource = messageSource;
-        this.restTemplate = restTemplate;
     }
 
     @Override
-    public ResponseDto getOrder(Long orderId) {
-        ResponseDto responseDto = new ResponseDto();
-        Order order = orderRepository.findById(orderId).get();
-        OrderDto orderDto = mapToUser(order);
-
-        ResponseEntity<ProductDto> responseEntity = restTemplate
-                .getForEntity("http://localhost:8081/product/" + order.getProductIds(),
-                        ProductDto.class);
-
-        ProductDto productDto = responseEntity.getBody();
-
-        System.out.println(responseEntity.getStatusCode());
-
-        responseDto.setOrderDto(orderDto);
-        responseDto.setProductDto(productDto);
-
-        return responseDto;
-    }
-
-    private OrderDto mapToUser(Order order){
-        OrderDto orderDto = new OrderDto();
-        orderDto.setProductIds(order.getProductIds());
-        orderDto.setAddress(order.getAddress());
-        orderDto.setOrderTotalPrice(order.getOrderTotalPrice());
-        orderDto.setAddedBy(order.getAddedBy());
-        orderDto.setAddedDate(order.getAddedDate());
-        orderDto.setModifiedBy(order.getModifiedBy());
-        orderDto.setModifiedDate(order.getModifiedDate());
-        orderDto.setActive(order.getActive());
-        orderDto.setLocked(order.getLocked());
-        orderDto.setStatus(order.getStatus());
-        return orderDto;
+    public Result getOrder(Long id, ResponseDto responseDto) {
+        boolean businessRule = orderRepository.existsOrderByIdAndStatusAndLocked(id, '1', '0');
+        if (businessRule) {
+            Order order = orderRepository.findById(id).get();
+            responseDto = OrderMapper.mapToResponse(OrderMapper.mapToOrder(order), responseDto);
+            return new SuccessDataResult<>(responseDto);
+        }
+        return new ErrorDataResult(messageSource.getMessage(Constant.ERROR_ID, null, Locale.getDefault()));
     }
 
     @Override
@@ -153,7 +130,7 @@ public class OrderServiceImpl implements OrderService {
             return new SuccessResult();
         }
 
-        return new ErrorResult(String.valueOf(HttpStatus.RESET_CONTENT.value()), messageSource.getMessage(Constant.ERROR_CATEGORYTITLE, null, Locale.getDefault()));
+        return new ErrorResult(String.valueOf(HttpStatus.RESET_CONTENT.value()), messageSource.getMessage(Constant.ERROR_ID, null, Locale.getDefault()));
     }
 
 

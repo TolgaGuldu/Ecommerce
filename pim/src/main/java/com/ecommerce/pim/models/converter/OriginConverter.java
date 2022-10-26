@@ -7,7 +7,7 @@ import javax.persistence.Converter;
 import java.util.stream.Stream;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */

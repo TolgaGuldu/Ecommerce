@@ -8,7 +8,7 @@ import com.ecommerce.om.models.Address;
 import java.util.Date;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -21,7 +21,6 @@ public class AddressMapper {
 
     public static Address addressCreateMapper(CreateAddressRequestDto createAddressRequestDto) {
         Address address = new Address();
-        address.setOrder(createAddressRequestDto.getOrder());
         address.setDescription(createAddressRequestDto.getDescription());
         address.setAddress(createAddressRequestDto.getAddress());
         address.setAddedBy(0);
@@ -35,7 +34,6 @@ public class AddressMapper {
     }
 
     public static Address addressUpdateMapper(UpdateAddressRequestDto updateAddressRequestDto, Address updatedAddress) {
-        updatedAddress.setOrder(updateAddressRequestDto.getOrder());
         updatedAddress.setDescription(updateAddressRequestDto.getDescription());
         updatedAddress.setAddress(updateAddressRequestDto.getAddress());
         updatedAddress.setModifiedBy(0);

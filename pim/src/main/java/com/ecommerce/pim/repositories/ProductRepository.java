@@ -7,10 +7,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created on 25 October, 2022
+ * Created on October 2022
  *
  * @author tolga
  */
@@ -19,6 +20,8 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("SELECT p FROM Product p WHERE p.id = :id and p.status ='1' and p.locked= '0'")
     List<Product> findById(long id);
+
+    List<Product> findAllByIdIn(ArrayList<Long> idList);
 
     @Query("SELECT p FROM Product p WHERE p.status ='1' and p.locked= '0'")
     Page<Product> findAll(Pageable pageable);
